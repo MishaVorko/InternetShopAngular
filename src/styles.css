@@ -1,0 +1,21 @@
+/* Main CSS*/
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Karla", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: #464646;
+  background: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #464646;
+
+}
+

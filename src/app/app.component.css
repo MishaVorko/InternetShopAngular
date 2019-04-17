@@ -1,0 +1,140 @@
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+/* ***** Blue TopBar ***** */
+.topbar-container {
+  background: #08c;
+  color: #ffffff;
+}
+
+.topbar {
+  width: 94%;
+  height: 47px;
+  margin: 0 auto;
+}
+
+.topbar-col {
+  width: 50%;
+  height: 47px;
+  padding: 0 15px;
+  line-height: 47px;
+}
+
+.topbar-col a {
+  color: #ffffff;
+  font-size: 85%;
+}
+
+.topbar-l-col > a > i {
+  display: inline-block;
+  position: relative;
+  margin-left: 0.2em;
+  transition: 0.4s ease-in-out;
+}
+
+.topbar-l-col > a:hover i {
+  transform: translate(5px);
+}
+
+.fa-long-arrow-right:before {
+  content: "\2192";
+  box-sizing: border-box;
+}
+
+.topbar-r-col > a {
+  text-transform: uppercase;
+}
+
+.topbar-r-col > a:hover {
+  text-decoration: underline;
+}
+
+/* ***** Blue TopBar END ***** */
+
+/* ***** Main Header with navigation ***** */
+.navbar-default-wrap {
+  background-color: #f8f9fb;
+  color: black;
+}
+
+.navbar-header {
+  width: 100%;
+  padding: 1.2857142857142858em 0;
+}
+
+.navbar-h-col {
+  width: 33.33333333333333%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.navbar-header-left {
+  margin: 1.7142857142857142em 0;
+}
+
+.navbar-header-right {
+  margin: 23px 0;
+}
+
+.nav-sotial a {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  line-height: 28px;
+  color: black;
+  transition: 0.3s;
+}
+
+.nav-sotial a:hover, .navbar-header-quick-button a:hover, .main-nav li a:hover{
+  color: #1290d0;
+}
+
+.logo {
+  height: 76px;
+}
+
+.navbar-header-center {
+  text-align: center;
+}
+
+.navbar-header-quick-button {
+  float: right;
+  margin: 0 0 0 30px;
+}
+
+.navbar-header-quick-button a {
+  font-size: 15px;
+  color: black;
+}
+
+/*Navbar footer - main navigation*/
+.main-nav {
+  border-top: 1px solid #e5e5e5;
+}
+
+.main-nav li a {
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+  line-height: 55px;
+  text-transform: uppercase;
+  padding: 0 28px;
+}
+
+.navbar-default-wrap nav{
+  padding: 0;
+}
+
+/* ***** END Main Header with navigation ***** */

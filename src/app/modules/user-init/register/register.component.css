@@ -1,0 +1,25 @@
+#register-box {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+}
+
+#login-box h2{
+  margin-bottom: 20px;
+}
+
+
+.goToRegister a {
+  color: #749fd0;
+}
+
+.goToRegister a:hover {
+  color: #1290d0;
+  text-decoration: none;
+}
+
+
+.invalid-feedback {
+  font-size: 14px;
+}

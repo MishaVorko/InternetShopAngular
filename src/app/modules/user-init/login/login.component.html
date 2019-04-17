@@ -1,0 +1,41 @@
+<div id="login-box">
+  <h2>Login</h2>
+  <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">
+    <div class="form-group row">
+      <label for="loginInputEmail" class="col-lg-3 col-form-label">Пошта: </label>
+      <div class="col-lg-9">
+        <input
+          [ngClass]="[!inputValid.email && loginForm.touched ? 'is-invalid' : '', inputValid.email ? 'is-valid' : '']"
+          [(ngModel)]="InitFormObj.email"
+          id="loginInputEmail" class="form-control" type="email" name="email" placeholder="Ел. пошта"
+          required (input)="validateEmail(loginForm)">
+        <div class="invalid-feedback">
+          {{inputValid.emailMessage}}
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="loginInputPass" class="col-lg-3 col-form-label">Пароль: </label>
+      <div class="col-lg-9">
+        <input
+          [ngClass]="[!inputValid.password && loginForm.touched ? 'is-invalid' : '', inputValid.password ? 'is-valid' : '']"
+          [(ngModel)]="InitFormObj.password"
+          id="loginInputPass" class="form-control" type="text" name="password" placeholder="Пароль"
+          required (input)="validatePassword(loginForm)">
+        <div class="invalid-feedback">
+          {{inputValid.passwordMessage}}
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-lg-12">
+        <button type="submit" class="btn btn-primary" [disabled]="!formValid">Вхід</button>
+      </div>
+    </div>
+  </form>
+
+  <br>
+  <div class="goToRegister">
+    <p>Якщо у вас немає аккаунта перейдіть на форму <a routerLink="/register">Реєстрациї</a></p>
+  </div>
+</div>

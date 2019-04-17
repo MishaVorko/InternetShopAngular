@@ -1,0 +1,75 @@
+<div id="register-box">
+  <h2>Register</h2>
+  <form #registerForm="ngForm" (ngSubmit)="registerUser(registerForm)" method="post">
+    <div class="form-group row">
+      <label for="registerInputName" class="col-lg-3 col-form-label">Ім'я: </label>
+      <div class="col-lg-9">
+        <input
+          [ngClass]="[!inputValid.name && registerForm.touched ? 'is-invalid' : '', inputValid.name ? 'is-valid' : '']"
+          [(ngModel)]="InitFormObj.name" maxlength="20"
+          id="registerInputName" class="form-control" type="text" name="name" placeholder="Ім'я"
+          required (input)="validateName(registerForm)">
+        <div class="invalid-feedback">
+          {{inputValid.nameMessage}}
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="registerInputSurname" class="col-lg-3 col-form-label">Фамілія </label>
+      <div class="col-lg-9">
+        <input
+          [ngClass]="[!inputValid.surname && registerForm.touched ? 'is-invalid' : '', inputValid.surname ? 'is-valid' : '']"
+          [(ngModel)]="InitFormObj.surname" maxlength="30"
+          id="registerInputSurname" class="form-control" type="text" name="surname" placeholder="Фамілія"
+          required (input)="validateSurname(registerForm)">
+        <div class="invalid-feedback">
+          {{inputValid.surnameMessage}}
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="registerInputEmail" class="col-lg-3 col-form-label">Пошта: </label>
+      <div class="col-lg-9">
+        <input
+          [ngClass]="[!inputValid.email && registerForm.touched ? 'is-invalid' : '', inputValid.email ? 'is-valid' : '']"
+          [(ngModel)]="InitFormObj.email"
+          id="registerInputEmail" class="form-control" type="email" name="email" placeholder="Ел. пошта"
+          required (input)="validateEmail(registerForm)">
+        <div class="invalid-feedback">
+          {{inputValid.emailMessage}}
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="registerInputAddress" class="col-lg-3 col-form-label">Адреса: </label>
+      <div class="col-lg-9">
+        <input
+          [ngClass]="[!inputValid.address && registerForm.touched ? 'is-invalid' : '', inputValid.address ? 'is-valid' : '']"
+          [(ngModel)]="InitFormObj.address"
+          id="registerInputAddress" class="form-control" type="text" name="Address" placeholder="Адреса"
+          required (input)="validateAddress(registerForm)">
+        <div class="invalid-feedback">
+          {{inputValid.addressMessage}}
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="registerInputPass" class="col-lg-3 col-form-label">Пароль: </label>
+      <div class="col-lg-9">
+        <input
+          [ngClass]="[!inputValid.password && registerForm.touched ? 'is-invalid' : '', inputValid.password ? 'is-valid' : '']"
+          [(ngModel)]="InitFormObj.password"
+          id="registerInputPass" class="form-control" type="text" name="password" placeholder="Пароль"
+          required (input)="validatePassword(registerForm)">
+        <div class="invalid-feedback">
+          {{inputValid.passwordMessage}}
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-lg-12">
+        <button type="submit" class="btn btn-primary" [disabled]="!formValid">Реєстрація</button>
+      </div>
+    </div>
+  </form>
+</div>
